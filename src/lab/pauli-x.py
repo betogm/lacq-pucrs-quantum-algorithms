@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 qcx = QuantumCircuit(1, 1)
 
 # Inicializa o qubit no estado |0> (padrão)
+print("Matriz de entrada (vetor de estado |0>):", Statevector.from_label('0').data)
+
 # Aplica a porta Pauli-X para inverter o qubit para |1>
 qcx.x(0)
 
@@ -19,7 +21,7 @@ fig_circuit.savefig("images/pauli_x_circuit_diagram.png")
 
 # Simula o circuito para obter o vetor de estado após a porta X (antes da medição)
 stateh = Statevector.from_instruction(qcx.remove_final_measurements(inplace=False))
-print("Matriz de saída (vetor de estado):", stateh.data)
+print("Matriz de saída (vetor de estado após Pauli-X):", stateh.data)
 
 # Visualiza o estado quântico no diagrama de Bloch
 plot_bloch_multivector(stateh)
