@@ -47,7 +47,7 @@ python src/03-pauli-x.py
 python src/04-pauli-y.py
 python src/04-pauli-y-x.py
 python src/05-pauli-z.py
-python src/05-pauli-z-x.py
+python src/06-pauli-z-x.py
 ```
 
 ## Contribua com esse projeto no GitHub!
